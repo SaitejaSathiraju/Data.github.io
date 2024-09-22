@@ -25,6 +25,7 @@ app.post('/optimize', (req, res) => {
       console.error(`Stderr: ${stderr}`);
       return res.status(500).send("Optimization error");
     }
+  
 
     // Parse the Python output and send it back to the client
     const result = JSON.parse(stdout);
